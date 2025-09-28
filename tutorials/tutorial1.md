@@ -217,6 +217,7 @@ From both calculations:
 
 > 📘 **Note:** All calculations are approximated to **two decimal places**.
 
+---
 
 **External Problem**  
 Given that 30% of a certain program could be executed in parallel, calculate the **speed-up factor** due to executing that program on 8 processors/cores instead of a single processor. 
