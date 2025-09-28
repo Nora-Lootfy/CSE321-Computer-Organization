@@ -10,18 +10,18 @@ It is organized into three main sections: **Labs**, **Tutorials**, and **Notes**
 ```bash
 CSE321-Computer-Organization/
 ├── labs/               # MIPS assembly lab exercises (QtSPIM)
-│   ├── lab1.s          # Hello World program
-│   ├── lab2.s          # Print Name/ID/Course
+│   ├── lab1/           # Hello World program
+│   ├── lab2/
 │   └── ...
 │
 ├── tutorials/          # Theoretical problem sets and solutions
-│   ├── tutorial1.pdf   # Performance metrics, benchmarks
-│   ├── tutorial2.pdf
+│   ├── tutorial1.md    # Performance metrics, benchmarks
+│   ├── tutorial2.md
 │   └── ...
 │
 ├── notes/              # Summaries of lecture content
 │   ├── lec1.md         # Basic concepts and computer evolution
-│   ├── lec2.md         # Performance issues
+│   ├── lec2.md
 │   └── ...
 │
 └── README.md           # Project overview (this file)
