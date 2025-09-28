@@ -1,4 +1,4 @@
-# CSE301 – Computer Organization (I)  
+# CSE301 – Computer Organization 
 ## Tutorial 1  
 
 ---
@@ -232,3 +232,7 @@ $$
 \text{SpeedUp} = \frac{1}{(1 - 0.30) + \frac{0.30}{8}} \approx 1.3559
 $$
 
+
+
+### 🙏 Credit  
+Credit to **Eng. Hisham Abdullah** for the original tutorial material. 
