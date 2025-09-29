@@ -127,9 +127,3 @@ Maximum speedup (as $N \to \infty$):
 $$
 \text{SpeedUp}_{max} = \frac{1}{1 - f}
 $$  
-
-
-## 🎥 Video Resources
-
-### ▶️ Tutorial 1
-[Computer Organization - Tutorial 1](https://youtu.be/WLALP7e95TI)

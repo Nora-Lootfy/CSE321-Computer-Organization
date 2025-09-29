@@ -33,5 +33,12 @@ CSE321-Computer-Organization/
   - Download: [QtSPIM official site](https://spimsimulator.sourceforge.net/)  
 
 
+## 🎥 Video Resources
+
+### Tutorials
+#### ▶️ Tutorial 1 [Computer Organization - Tutorial 1](https://youtu.be/WLALP7e95TI)
+
+### Labs
+
 ---
 ⚡ From bits to assembly — Let's get started!
