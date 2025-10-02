@@ -113,14 +113,8 @@ System calls (`syscall`) allow your MIPS program to **request services from the 
 
 <br/>
 
-<div style="border-radius: 8px; margin: auto; box-shadow: 2px 2px 10px rgba(0,0,0,0.15);">
-  <div style="background: #f2f2f2; padding: 8px; border-top-left-radius: 8px; border-top-right-radius: 8px; display: flex; align-items: center">
-    <div style="width: 12px; height: 12px; background: #ff5f56; border-radius: 50%; margin-right: 6px;"></div>
-    <div style="width: 12px; height: 12px; background: #ffbd2e; border-radius: 50%; margin-right: 6px;"></div>
-    <div style="width: 12px; height: 12px; background: #27c93f; border-radius: 50%; margin-right: 10px;"></div>
-    <strong>HelloWorld.asm</strong>
-  </div>
-<pre style="margin:15px" ><code class="language-armasm">
+```asm
+
 .data                                   # data segment
 hello:    .asciiz "Hello World"
 
@@ -130,11 +124,11 @@ main:
     li $v0, 4                           # syscall 4 = print string
     la $a0, hello                       # load address of string
     syscall
+
     li $v0, 10                          # syscall 10 = exit
     syscall 
+```
 
-</code></pre>
-</div>
 <br>
 
 <div class="info">
