@@ -1,0 +1,6 @@
+*.tex
+/.quarto/
+**/*.quarto_ipynb
+*.yml
+*.json
+*.css
