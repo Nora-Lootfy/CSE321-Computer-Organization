@@ -35,10 +35,8 @@ CSE321-Computer-Organization/
 
 ## 🎥 Video Resources
 
-### Tutorials
 #### ▶️ Tutorials [Computer Organization - Tutorials](https://www.youtube.com/playlist?list=PLr7yHqGd2MWBGvw1pJ6UOKhYPxwTrviL-)
 
-### Labs
 #### ▶️ Labs [Computer Organization - Labs](https://www.youtube.com/playlist?list=PLr7yHqGd2MWCuMy-stzmBUA-J31m61NO_)
 
 ---
