@@ -36,9 +36,10 @@ CSE321-Computer-Organization/
 ## 🎥 Video Resources
 
 ### Tutorials
-#### ▶️ Tutorial 1 [Computer Organization - Tutorial 1](https://youtu.be/WLALP7e95TI)
+#### ▶️ Tutorials [Computer Organization - Tutorials](https://www.youtube.com/playlist?list=PLr7yHqGd2MWBGvw1pJ6UOKhYPxwTrviL-)
 
 ### Labs
+#### ▶️ Labs [Computer Organization - Labs](https://www.youtube.com/playlist?list=PLr7yHqGd2MWCuMy-stzmBUA-J31m61NO_)
 
 ---
 ⚡ From bits to assembly — Let's get started!

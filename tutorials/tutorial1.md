@@ -50,7 +50,7 @@ The following table shows the execution times (in seconds) for five different be
 | I         | 39449 | 35527 | 66000 |
 | K         | 772   | 368   | 369   |
 
-a. Compute the speed metric for each processor for each benchmark, normalized to machine **R**. That is, the ratio for R are all 1.0. Other ratios are calculated with R treated as the reference system.
+a. Compute the speed metric for each processor for each benchmark, normalized to machine **R**. That is, the ratio for R are all 1.0. Other ratios are calculated with R treated as the reference system.  
 b. Repeat part (a) using **M** as the reference machine.  
 c. Which machine is the slowest based on each of the preceding two calculations?  
 
@@ -69,17 +69,17 @@ Given that 30% of a certain program could be executed in parallel, calculate the
 
 1. For any two processors to have the same architecture, they must:  
    (a) produce the same number of control signals  
-   (b) **support the same set of machine instructions  ✅**\
+   (b) **support the same set of machine instructions  ✅**  
    (c) have the same number of cache levels on chip  
    (d) Only (a) and (b)  
-   (e) Only (b) and (c)
+   (e) Only (b) and (c)  
 
    
 
 2. Which of the following computer facilities does not get involved when updating  
    variable `x` value using the following HLL command: `++x;`  
 
-   (a) **Data movement  ✅**\
+   (a) **Data movement  ✅**  
    (b) Control  
    (c) Data processing  
    (d) All the above  
@@ -103,44 +103,158 @@ Determine the **effective CPI**, **MIPS rate**, and **execution time** for this 
 
 **Given:**
 
-$$f = 40 \ \text{MHz}, \quad I_c = 100{,}000$$
-
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <mi>f</mi>
+    <mo>=</mo>
+    <mn>40</mn>
+    <mtext> MHz</mtext>
+    <mo>,</mo>
+    <msub><mi>I</mi><mi>c</mi></msub>
+    <mo>=</mo>
+    <mn>100000</mn>
+  </mrow>
+</math><br>
 
 **1. Average CPI**
 
-$$
-CPI_{avg} = \frac{\sum (CPI_x \cdot I_x)}{I_c}
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <msub><mi>CPI</mi><mi>avg</mi></msub>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mo>&#x2211;</mo>
+        <mrow>
+          <msub><mi>CPI</mi><mi>x</mi></msub>
+          <mo>&#x22C5;</mo>
+          <msub><mi>I</mi><mi>x</mi></msub>
+        </mrow>
+      </mrow>
+      <msub><mi>I</mi><mi>c</mi></msub>
+    </mfrac>
+  </mrow>
+</math><br>
 
-$$
-CPI_{avg} = \frac{45{,}000 \cdot 1 + 32{,}000 \cdot 2 + 15{,}000 \cdot 2 + 8{,}000 \cdot 2}{100{,}000}
-$$
 
-$$
-CPI_{avg} = 1.55 \ \text{cycles/instruction}
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <msub><mi>CPI</mi><mi>avg</mi></msub>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mn>45000</mn>
+        <mo>&#x22C5;</mo>
+        <mn>1</mn>
+        <mo>+</mo>
+        <mn>32000</mn>
+        <mo>&#x22C5;</mo>
+        <mn>2</mn>
+        <mo>+</mo>
+        <mn>15000</mn>
+        <mo>&#x22C5;</mo>
+        <mn>2</mn>
+        <mo>+</mo>
+        <mn>8000</mn>
+        <mo>&#x22C5;</mo>
+        <mn>2</mn>
+      </mrow>
+      <mn>100000</mn>
+    </mfrac>
+  </mrow>
+</math><br>
+
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <msub><mi>CPI</mi><mi>avg</mi></msub>
+    <mo>=</mo>
+    <mn>1.55</mn>
+    <mtext> cycles/instruction</mtext>
+  </mrow>
+</math><br>
 
 
 **2. MIPS rate**
 
-$$
-MIPS = \frac{f}{CPI_{avg} \cdot 10^6}
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <mi>MIPS</mi>
+    <mo>=</mo>
+    <mfrac>
+      <mi>f</mi>
+      <mrow>
+        <msub><mi>CPI</mi><mi>avg</mi></msub>
+        <mo>&#x22C5;</mo>
+        <msup><mn>10</mn><mn>6</mn></msup>
+      </mrow>
+    </mfrac>
+  </mrow>
+</math><br>
 
-$$
-MIPS = \frac{40}{1.55} \approx 25.8 \ \text{million instructions/sec}
-$$
+
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <mi>MIPS</mi>
+    <mo>=</mo>
+    <mfrac>
+      <mn>40</mn>
+      <mn>1.55</mn>
+    </mfrac>
+    <mo>≈</mo>
+    <mn>25.8</mn>
+    <mtext> million instructions/sec</mtext>
+  </mrow>
+</math><br>
+
 
 
 **3. Execution time**
 
-$$
-T_p = \frac{I_c \cdot CPI_{avg}}{f}
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <msub><mi>T</mi><mi>p</mi></msub>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <msub><mi>I</mi><mi>c</mi></msub>
+        <mo>&#x22C5;</mo>
+        <msub><mi>CPI</mi><mi>avg</mi></msub>
+      </mrow>
+      <mi>f</mi>
+    </mfrac>
+  </mrow>
+</math><br>
 
-$$
-T_p = \frac{100{,}000 \cdot 1.55}{40 \times 10^6} = 3.875 \times 10^{-3} \ \text{sec} = 3.875 \ \text{ms}
-$$
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <msub><mi>T</mi><mi>p</mi></msub>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mn>100000</mn>
+        <mo>&#x22C5;</mo>
+        <mn>1.55</mn>
+      </mrow>
+      <mrow>
+        <mn>40</mn>
+        <mo>&#x22C5;</mo>
+        <msup><mn>10</mn><mn>6</mn></msup>
+      </mrow>
+    </mfrac>
+    <mo>=</mo>
+    <mn>3.875</mn>
+    <mo>&#xD7;</mo>
+    <msup><mn>10</mn><mrow><mo>-</mo><mn>3</mn></mrow></msup>
+    <mtext> sec</mtext>
+    <mo>=</mo>
+    <mn>3.875</mn>
+    <mtext> ms</mtext>
+  </mrow>
+</math><br>
+
 
 
 ---
@@ -156,17 +270,41 @@ The following table shows the execution times (in seconds) for five different be
 | I         | 39449 | 35527 | 66000 |
 | K         | 772   | 368   | 369   |
 
-a. Compute the speed metric for each processor for each benchmark, normalized to machine **R**. That is, the ratio for R are all 1.0. Other ratios are calculated with R treated as the reference system.\
-b. Repeat part (a) using **M** as the reference machine.\
-c. Which machine is the slowest based on each of the preceding two calculations? \
+a. Compute the speed metric for each processor for each benchmark, normalized to machine **R**. That is, the ratio for R are all 1.0. Other ratios are calculated with R treated as the reference system.  
+b. Repeat part (a) using **M** as the reference machine.  
+c. Which machine is the slowest based on each of the preceding two calculations?  
 
-$$
-r_x = \frac{T_{ref}}{T_{sut}}
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <msub><mi>r</mi><mi>x</mi></msub>
+    <mo>=</mo>
+    <mfrac>
+      <msub><mi>T</mi><mi>ref</mi></msub>
+      <msub><mi>T</mi><mi>sut</mi></msub>
+    </mfrac>
+  </mrow>
+</math><br>
 
-$$
-r_g = \Bigg(\prod_{i=1}^{n} r_{x,i}\Bigg)^{\tfrac{1}{n}}
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub><mi>r</mi><mi>g</mi></msub>
+  <mo>=</mo>
+  <msup>
+    <mrow>
+      <mo>(</mo>
+      <mrow>
+        <munderover>
+          <mo>&#x220F;</mo> <!-- Product symbol ∏ -->
+          <mi>i</mi>
+          <mi>n</mi>
+        </munderover>
+        <msub><mi>r</mi><mrow><mi>x</mi><mo>,</mo><mi>i</mi></mrow></msub>
+      </mrow>
+      <mo>)</mo>
+    </mrow>
+    <mfrac><mn>1</mn><mi>n</mi></mfrac>
+  </msup>
+</math><br>
+
 
 
 #### Case 1: Using R as reference machine
@@ -179,13 +317,53 @@ $$
 | I         | 1.11 | 0.60 |
 | K         | 2.10 | 2.09 |
 
-$$
-r_g(M) = (1.71 \times 1.19 \times 0.43 \times 1.11 \times 2.10)^{\tfrac{1}{5}} \approx 1.15
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub><mi>r</mi><mrow><mi>g</mi><mo>(</mo><mi>M</mi><mo>)</mo></mrow></msub>
+  <mo>=</mo>
+  <msup>
+    <mrow>
+      <mo>(</mo>
+      <mn>1.71</mn>
+      <mo>&#xD7;</mo>
+      <mn>1.19</mn>
+      <mo>&#xD7;</mo>
+      <mn>0.43</mn>
+      <mo>&#xD7;</mo>
+      <mn>1.11</mn>
+      <mo>&#xD7;</mo>
+      <mn>2.10</mn>
+      <mo>)</mo>
+    </mrow>
+    <mfrac><mn>1</mn><mn>5</mn></mfrac>
+  </msup>
+  <mo>≈</mo>
+  <mn>1.15</mn>
+</math><br>
 
-$$
-r_g(Z) = (3.11 \times 1.19 \times 0.49 \times 0.60 \times 2.09)^{\tfrac{1}{5}} \approx 1.18
-$$
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub><mi>r</mi><mrow><mi>g</mi><mo>(</mo><mi>Z</mi><mo>)</mo></mrow></msub>
+  <mo>=</mo>
+  <msup>
+    <mrow>
+      <mo>(</mo>
+      <mn>3.11</mn>
+      <mo>&#xD7;</mo>
+      <mn>1.19</mn>
+      <mo>&#xD7;</mo>
+      <mn>0.49</mn>
+      <mo>&#xD7;</mo>
+      <mn>0.60</mn>
+      <mo>&#xD7;</mo>
+      <mn>2.09</mn>
+      <mo>)</mo>
+    </mrow>
+    <mfrac><mn>1</mn><mn>5</mn></mfrac>
+  </msup>
+  <mo>≈</mo>
+  <mn>1.18</mn>
+</math><br>
+
 
 So, relative to R → both M and Z are faster, with **Z slightly faster than M**.
 
@@ -200,13 +378,53 @@ So, relative to R → both M and Z are faster, with **Z slightly faster than M**
 | I         | 0.90 | 0.54 |
 | K         | 0.48 | 1.00 |
 
-$$
-r_g(R) = (0.59 \times 0.84 \times 2.32 \times 0.90 \times 0.48)^{\tfrac{1}{5}} \approx 0.87
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub><mi>r</mi><mrow><mi>g</mi><mo>(</mo><mi>R</mi><mo>)</mo></mrow></msub>
+  <mo>=</mo>
+  <msup>
+    <mrow>
+      <mo>(</mo>
+      <mn>0.59</mn>
+      <mo>&#xD7;</mo>
+      <mn>0.84</mn>
+      <mo>&#xD7;</mo>
+      <mn>2.32</mn>
+      <mo>&#xD7;</mo>
+      <mn>0.90</mn>
+      <mo>&#xD7;</mo>
+      <mn>0.48</mn>
+      <mo>)</mo>
+    </mrow>
+    <mfrac><mn>1</mn><mn>5</mn></mfrac>
+  </msup>
+  <mo>≈</mo>
+  <mn>0.87</mn>
+</math><br>
 
-$$
-r_g(Z) = (1.82 \times 1.00 \times 1.13 \times 0.54 \times 1.00)^{\tfrac{1}{5}} \approx 1.02
-$$
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub><mi>r</mi><mrow><mi>g</mi><mo>(</mo><mi>Z</mi><mo>)</mo></mrow></msub>
+  <mo>=</mo>
+  <msup>
+    <mrow>
+      <mo>(</mo>
+      <mn>1.82</mn>
+      <mo>&#xD7;</mo>
+      <mn>1.00</mn>
+      <mo>&#xD7;</mo>
+      <mn>1.13</mn>
+      <mo>&#xD7;</mo>
+      <mn>0.54</mn>
+      <mo>&#xD7;</mo>
+      <mn>1.00</mn>
+      <mo>)</mo>
+    </mrow>
+    <mfrac><mn>1</mn><mn>5</mn></mfrac>
+  </msup>
+  <mo>≈</mo>
+  <mn>1.02</mn>
+</math><br>
+
 
 So, relative to M → **R is slower**, and **Z is slightly faster than M**.
 
@@ -215,7 +433,10 @@ From both calculations:
 - **R** is the slowest machine.  
 - **Z** is the fastest overall.
 
-> 📘 **Note:** All calculations are approximated to **two decimal places**.
+<div class="info">
+  <strong>ℹ️ Info:</strong> <br> 
+  All calculations are approximated to <b>two decimal places</b>
+</div>
 
 ---
 
@@ -224,14 +445,46 @@ Given that 30% of a certain program could be executed in parallel, calculate the
 
 We use **Amdahl's Law**:
 
-$$
-\text{SpeedUp} = \frac{1}{(1 - f) + \frac{f}{N}}
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <mtext>SpeedUp</mtext>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mo>(</mo>
+        <mn>1</mn>
+        <mo>-</mo>
+        <mi>f</mi>
+        <mo>)</mo>
+        <mo>+</mo>
+        <mfrac><mi>f</mi><mi>N</mi></mfrac>
+      </mrow>
+    </mfrac>
+  </mrow>
+</math><br><br>
 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <mtext>SpeedUp</mtext>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mo>(</mo>
+        <mn>1</mn>
+        <mo>-</mo>
+        <mn>0.30</mn>
+        <mo>)</mo>
+        <mo>+</mo>
+        <mfrac><mn>0.30</mn><mn>8</mn></mfrac>
+      </mrow>
+    </mfrac>
+    <mo>≈</mo>
+    <mn>1.3559</mn>
+  </mrow>
+</math><br>
 
-$$
-\text{SpeedUp} = \frac{1}{(1 - 0.30) + \frac{0.30}{8}} \approx 1.3559
-$$
 
 
 

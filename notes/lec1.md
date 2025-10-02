@@ -48,42 +48,103 @@
 ### Computer Evolution and Performance  
 
 **Parameters affecting performance:**  
-1. System clock speed ($f$)  
-2. Instruction count ($I_c$)  
-3. Cycles per instruction ($CPI$)  
+1. System clock speed (<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>f</mi>
+</math>)  
+2. Instruction count (<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msub><mi>I</mi><mi>c</mi></msub>
+</math>)  
+3. Cycles per instruction (<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>CPI</mi>
+</math>)  
 
 
 Since CPI varies across instructions, we use the **average CPI**:  
 
-$$
-CPI_{avg} = \frac{\sum (CPI_x \cdot I_x)}{I_c}
-$$  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <msub><mi>CPI</mi><mi>avg</mi></msub>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mo>&#x2211;</mo>
+        <mrow>
+          <msub><mi>CPI</mi><mi>x</mi></msub>
+          <mo>&#x22C5;</mo>
+          <msub><mi>I</mi><mi>x</mi></msub>
+        </mrow>
+      </mrow>
+      <msub><mi>I</mi><mi>c</mi></msub>
+    </mfrac>
+  </mrow>
+</math>
+
 
 ---
 
 **Performance Metrics**
 
-1. **Instructions per second (IPS, \(R_i\))**  
+1. **Instructions per second (IPS, R<sub>i</sub>)**  
 
-$$
-T_i = \frac{CPI}{f}, \quad R_i = \frac{1}{T_i} \ \text{instructions/sec}
-$$  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <msub><mi>T</mi><mi>i</mi></msub>
+    <mo>=</mo>
+    <mfrac>
+      <mi>CPI</mi>
+      <mi>f</mi>
+    </mfrac>
+    <mo>,</mo>
+    <msub><mi>R</mi><mi>i</mi></msub>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <msub><mi>T</mi><mi>i</mi></msub>
+    </mfrac>
+    <mtext> instructions/sec</mtext>
+  </mrow>
+</math>
+
 
 2. **Million instructions per second (MIPS, \(R_m\))**  
 
-$$
-R_m = \frac{R_i}{10^6}
-$$  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <msub><mi>R</mi><mi>m</mi></msub>
+    <mo>=</mo>
+    <mfrac>
+      <msub><mi>R</mi><mi>i</mi></msub>
+      <msup><mn>10</mn><mn>6</mn></msup>
+    </mfrac>
+  </mrow>
+</math>
 
-3. **Programs per second (PPS, \(R_p\))**  
 
-$$
-T_p = T_i \cdot I_c, \quad R_p = \frac{1}{T_p}
-$$  
+3. **Programs per second (PPS, R<sub>p</sub>)**  
 
-> 📘 **Note:** These performance metrics are valid for analyzing a **single system**.  
-> They cannot be directly used to compare **different systems** because of differences in manufacturers, architectures, and instruction sets.  
-> To compare across systems, we use **benchmark programs**.  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <msub><mi>T</mi><mi>p</mi></msub>
+    <mo>=</mo>
+    <msub><mi>T</mi><mi>i</mi></msub>
+    <mo>&#x22C5;</mo>
+    <msub><mi>I</mi><mi>c</mi></msub>
+    <mo>,</mo>
+    <msub><mi>R</mi><mi>p</mi></msub>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <msub><mi>T</mi><mi>p</mi></msub>
+    </mfrac>
+  </mrow>
+</math>
+
+<div class="info">
+  <strong>ℹ️ Info:</strong> <br> 
+  These performance metrics are valid for analyzing a <b>single system</b>.<br>
+  They cannot be directly used to compare <b>different systems</b> because of differences in manufacturers, architectures, and instruction sets.<br>
+  To compare across systems, we use <b>benchmark programs</b>.
+</div>
 
 ---
 
@@ -94,22 +155,50 @@ $$
 - Used to compare machines with a common workload.  
 
 Definitions:  
-- $T_{ref}$ = runtime on the **reference machine**  
-- $T_{sut}$ = runtime on the **system under test**  
+- <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><msub><mi>T</mi><mi>ref</mi></msub></math> = runtime on the **reference machine**  
+- <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><msub><mi>T</mi><mi>sut</mi></msub></math> = runtime on the **system under test**  
 
 Relative speed:  
 
-$$
-r_x = \frac{T_{ref}}{T_{sut}}
-$$  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <msub><mi>r</mi><mi>x</mi></msub>
+    <mo>=</mo>
+    <mfrac>
+      <msub><mi>T</mi><mi>ref</mi></msub>
+      <msub><mi>T</mi><mi>sut</mi></msub>
+    </mfrac>
+  </mrow>
+</math>
+
 
 Geometric mean speed:  
 
-$$
-r_g = \Bigg(\prod_{i=1}^{n} r_{x,i}\Bigg)^{\tfrac{1}{n}}
-$$  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub><mi>r</mi><mi>g</mi></msub>
+  <mo>=</mo>
+  <msup>
+    <mrow>
+      <mo>(</mo>
+      <mrow>
+        <munderover>
+          <mo>&#x220F;</mo>
+          <mi>i</mi>
+          <mi>n</mi>
+        </munderover>
+        <msub><mi>r</mi><mrow><mi>x</mi><mo>,</mo><mi>i</mi></mrow></msub>
+      </mrow>
+      <mo>)</mo>
+    </mrow>
+    <mfrac><mn>1</mn><mi>n</mi></mfrac>
+  </msup>
+</math>
 
-> 📘 **Note:** The larger the $r_g$, the faster the **system under test** compared to the reference machine.  
+
+<div class="info">
+  <strong>ℹ️ Info:</strong> <br> 
+  The larger the <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><msub><mi>r</mi><mi>g</mi></msub></math>, the faster the <b>system under test</b> compared to the reference machine.
+</div>
 
 ---
 
@@ -117,13 +206,44 @@ $$
 
 If a program takes time \(T\) on a single processor and only a fraction \(f\) can be executed in parallel on \(N\) processors:  
 
-$$
-\text{SpeedUp} = \frac{1}{(1 - f) + \tfrac{f}{N}}
-$$  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <mtext>SpeedUp</mtext>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mo>(</mo>
+        <mn>1</mn>
+        <mo>-</mo>
+        <mi>f</mi>
+        <mo>)</mo>
+        <mo>+</mo>
+        <mfrac><mi>f</mi><mi>N</mi></mfrac>
+      </mrow>
+    </mfrac>
+  </mrow>
+</math>
 
-Maximum speedup (as $N \to \infty$):  
+
+Maximum speedup (as <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mi>N</mi><mo>→</mo><mo>&#x221E;</mo></math>):  
 
 
-$$
-\text{SpeedUp}_{max} = \frac{1}{1 - f}
-$$  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow>
+    <mrow>
+      <mtext>SpeedUp</mtext>
+      <msub><mo></mo><mi>max</mi></msub>
+    </mrow>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mn>1</mn>
+        <mo>-</mo>
+        <mi>f</mi>
+      </mrow>
+    </mfrac>
+  </mrow>
+</math>
+
