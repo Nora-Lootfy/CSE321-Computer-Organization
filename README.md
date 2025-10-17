@@ -24,6 +24,11 @@ CSE321-Computer-Organization/
 │   ├── lec2.md
 │   └── ...
 │
+├── bonus/              # extra exercise
+│   ├── testYourself1.md
+│   ├── testYourself2.md
+│   └── ...
+│
 └── README.md           # Project overview (this file)
 ```
 
