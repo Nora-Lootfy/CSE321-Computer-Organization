@@ -35,7 +35,7 @@ Each instruction passes through the following stages:
 
 #### 4. Adding I-Type Instructions (Load & Store)
 
-<img src="../images/lec4/addLoadStore.png" width="700">
+<img src="../images/lec4/addLoadStore (2).png" width="700">
 
 #### 5. Adding I-Type Instructions (Branch)
 
