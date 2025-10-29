@@ -5,7 +5,8 @@
 
 # Single-Cycle CPU Implementation 
 
-On the next page is a **single-cycle datapath** for a machine different from the one seen in lecture.  
+
+**Question 1** On the next page is a **single-cycle datapath** for a machine different from the one seen in lecture.  
 It supports the following (complex) instructions:
 
 ```asm
@@ -100,7 +101,26 @@ What are the **CPI** and **cycle time** for this processor?
 
 <p class="page-break">
 
+**Question2** For this question, we will implement a hypothetical instruction **sw+** in the single-cycle pipeline. **sw+** is a “store word, with post increment” that is found in some real architectures (e.g., IA-64). It is encoded as an I-type instruction and performs the following operations:
+
+<img src="../images/tutorial4/q2-format.png" width="700">
+
+### Part (a) 
+
+The single-cycle datapath from lecture appears below. Show what changes are needed to support sw+ instruction. You should only add wires and muxes to the datapath; do not modify the main functional units themselves (the memory, register file and ALU). Try to keep your diagram neat!
+
+---
+
+### Part (b) 
+On the diagram below, write (next to the signal’s name) values of all control signals required for the sw+ instruction.
+
+<img src="../images/tutorial4/q2-datapath.png" width="700">
+
+<p class="page-break">
+
 ## Part 2: Questions with Answers  
+
+**Question1**
 
 ### Part (a) – Control Signals
 
@@ -185,3 +205,9 @@ What are the **CPI** and **cycle time** for this processor?
 ### Part (c) – CPI and Cycle Time
 
 Since the processor is a single-cycle implementation, the CPI is 1. The cycle time is set by the slowest instruction, which in this case is the sll_add, yielding a clock period of 15ns.
+
+<p class="page-break">
+
+**Question2**
+
+<img src="../images/tutorial4/q2-solution.png" width="700">
