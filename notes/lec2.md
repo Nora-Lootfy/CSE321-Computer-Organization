@@ -215,8 +215,10 @@ An **interrupt** temporarily halts the normal program flow so the CPU can handle
    - Execute ISR → restore context → resume program  
 
 #### Multiple Interrupts
-| Method | Description |
-|--------|--------------|
-| **Sequential (Disabled)** | Current ISR blocks others until done. |
-| **Nested (Prioritized)** | Higher-priority interrupts can preempt lower ones. |
+
+| **Method**  | **Description** |
+| --- | --- |
+| **Sequential Execution** | Interrupts are handled one at a time in the order they arrive (like a queue). The current ISR must finish before another begins — always **non-preemptive**. |
+| **Priority Execution**   | Interrupts are handled based on their priority level (using a priority queue). A higher-priority interrupt may either: <br>– **Disable the interrupt line** → acts **non-preemptively**. <br>– **Leave the line enabled** → allows **preemption (nested interrupts)**. |
+
 

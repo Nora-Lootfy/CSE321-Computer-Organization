@@ -570,9 +570,7 @@ A given processor has eight interrupt lines (numbered 0-7), and a policy that lo
 
 **Solution**  
 
-- disable interrupt method
-
-Service is non-preemptive and handled in arrival order:  
+- Sequential method
 
 | Interrupt | Arrival | Start | Finish |
 |---|---|---|---|
@@ -580,21 +578,28 @@ Service is non-preemptive and handled in arrival order:
 | 5 | 7 | 13| 23|
 | 1 | 11| 23| 33|
 | 4 | 13| 33| 43|
-| 0 | 15| 43| 53|
+| 0 | 25| 43| 53|
 
 
 - priority method
 
-Service is preemptive, allow higher-priority (lower number) interrupts to preempt:
+**First method:** Disable interrupt line  
+
 
 | Interrupt | Arrival | Start | Finish |
 |---|---|---|---|
-| 2 | 3 | 3 | 33|
+| 2 | 3 | 3 | 13|
 | 5 | 7 | 43| 53|
-| 1 | 11| 11| 31|
-| 4 | 13| 33| 43|
-| 0 | 15| 15| 25|
+| 1 | 11| 43| 53|
+| 4 | 13| 23| 33|
+| 0 | 25| 33| 43|
 
-<div style="text-align:center">
-  <img src="../images/lec2/interrupt.png" alt="interrupt">
-</div>
+**Second method:** preemptive execution  
+
+| Interrupt | Arrival | Execution |
+|---|---|---|
+| 2 | 3 | 3 → 11 and 21 → 23|
+| 5 | 7 | 43 → 53|
+| 1 | 11| 11 → 21|
+| 4 | 13| 23 → 25 and 35 → 43|
+| 0 | 25| 25 → 35|
