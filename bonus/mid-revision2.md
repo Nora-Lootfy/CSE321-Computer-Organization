@@ -18,15 +18,15 @@ Intel 8085 is a little endian microprocessor. what is the correct memory state a
     <td></td>
 </tr>
 <tr>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td></td>
+    <td> </td>
     <td></td>
 </tr>
 <tr>
+    <td> </td>
     <td></td>
+</tr>
+<tr>
+    <td> </td>
     <td></td>
 </tr>
 </table>
@@ -34,6 +34,8 @@ Intel 8085 is a little endian microprocessor. what is the correct memory state a
 --- 
 
 **3)**  
+
+<img src="../images/mid-revision/ISA.png" width="650">
 
 Determine the following computer hardwire parameters to be designed:  
 
