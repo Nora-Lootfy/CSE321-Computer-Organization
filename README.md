@@ -38,6 +38,11 @@ CSE321-Computer-Organization/
   - Download: [QtSPIM official site](https://spimsimulator.sourceforge.net/)  
 
 
+## 💪 Training
+- **CSE141A Solutions** → access all official solution files.  
+  - Link: [Solution Archive](https://cseweb.ucsd.edu/classes/sp13/cse141-a/solutions/)
+
+
 ## 🎥 Video Resources
 
 #### ▶️ Tutorials [Computer Organization - Tutorials](https://www.youtube.com/playlist?list=PLr7yHqGd2MWBGvw1pJ6UOKhYPxwTrviL-)
